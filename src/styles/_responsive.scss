@@ -1,0 +1,85 @@
+@media screen and (max-width: 420px) {
+  nav {
+    position: relative;
+
+    .nav-button {
+      font-size: 2rem;
+      color: $lighter-grey;
+      min-width: 44px;
+      min-height: 44px;
+      position: relative;
+    }
+
+    ul {
+      height: 100%;
+      position: fixed;
+      background-color: white;
+      padding: 1rem;
+      box-sizing: border-box;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      min-width: 10rem;
+      text-align: right;
+      transform: translateX(100%);
+      transition: all 0.5s;
+      li {
+        display: block;
+        // background-color: green;
+        min-width: 100%;
+        @include flex(column, center, center, nowrap);
+        a {
+          @include flex(column, center, center, nowrap);
+          width: max-content;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .nav-button {
+    display: none;
+  }
+  nav {
+    @include flex(row, space-around, center, nowrap);
+    ul {
+      width: max-content;
+      @include flex(row, space-around, center, nowrap);
+      gap: 1rem;
+      li {
+        width: max-content;
+        a {
+          width: 44px;
+          height: 44px;
+          width: max-content;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .detail-page {
+    &__header {
+      // background-color: blue;
+      @include flex(row, space-between, start, wrap);
+      gap: 3ch;
+    }
+    &__thumbnail {
+      max-width: 360px;
+      flex: 1;
+    }
+    &__information {
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    min-width: 1200px;
+  }
+}

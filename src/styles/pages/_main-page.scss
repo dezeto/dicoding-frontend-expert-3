@@ -1,0 +1,74 @@
+main {
+  background-color: white;
+  width: 100%;
+  flex: 2;
+  margin: auto;
+  .content__heading {
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 1rem;
+  }
+  .restaurants {
+    padding: 1rem 2rem;
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: #e84545;
+  font-size: 1.4rem;
+  padding: 1rem;
+  color: white;
+  z-index: 2;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  min-height: 480px;
+  text-align: center;
+  @include flex(column, center, center, wrap);
+  // @include hero-image("/images/heros/hero-image_1.jpg");
+  &__inner {
+    position: absolute;
+    @include flex(column, center, center, wrap);
+    position: absolute;
+    margin: 2rem;
+  }
+  &__title {
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: white;
+    // background-color: blue;
+  }
+  &__tagline {
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+  }
+}
+
+.hero-image {
+  // background-color: green;
+  position: relative;
+  width: 100vw;
+  min-height: 480px;
+  @include flex(column, center, center, nowrap);
+  &__content {
+    width: 100%;
+    position: relative;
+    width: 100vw;
+    height: 480px;
+    // background-color: magenta;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,208 @@
+.detail-page {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  //   background-color: blue;
+  height: max-content;
+  @include flex(column, center, center, wrap);
+  max-width: 1200px;
+  margin: auto;
+  gap: 1ch;
+  &__thumbnail {
+    // background-color: green;
+    border-radius: 0.5rem;
+    min-height: 240px;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    &-image {
+      position: relative;
+      width: 100%;
+      border-radius: 1rem;
+      object-position: center;
+      object-fit: cover;
+      min-height: 240px;
+    }
+  }
+  &__rating {
+    background-color: white;
+    border-radius: 0.5rem;
+    right: 2ch;
+    bottom: 2ch;
+    @include flex(row, center, center, wrap);
+    position: absolute;
+    gap: 0.5ch;
+    color: $red;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem;
+  }
+  &__category {
+    margin: 0.5ch 0rem;
+    @include flex(row, start, center, wrap);
+    gap: 1ch;
+    &-item {
+      //   border: 1px solid grey;
+      color: white;
+      font-weight: 500;
+      background-color: $grey;
+      padding: 1ch 2ch;
+      font-size: 1.2rem;
+      border-radius: 1.5ch;
+    }
+  }
+  &__information {
+    padding: 1rem 0rem;
+    width: 100%;
+    // background-color: magenta;
+    @include flex(column, start, start, wrap);
+    gap: 1ch;
+  }
+  &__name {
+    font-size: 2.4rem;
+    color: $black;
+    @include text-overflow(2);
+  }
+  &__location {
+    font-size: 1.4rem;
+    color: grey;
+    font-weight: 500;
+    @include flex(row, space-around, center, wrap);
+    gap: 1ch;
+  }
+  &__description {
+    width: 100%;
+    // background-color: green;
+    font-size: 1.2rem;
+    color: grey;
+    @include text-overflow(3);
+  }
+
+  &__menu {
+    @include flex(column, center, center, wrap);
+    position: relative;
+    width: 100%;
+    gap: 1ch;
+  }
+
+  .menu__item {
+    position: relative;
+    // background-color: turquoise;
+    @include flex(column, center, start, wrap);
+    gap: 0.2ch;
+    width: 100%;
+    &-title {
+      font-size: 1.6rem;
+      color: $black;
+    }
+    &-list {
+      @include flex(row, start, center, wrap);
+      gap: 0.2ch;
+      font-size: 1.2rem;
+      gap: 1ch;
+      margin: 0.5ch 0rem;
+      &__item {
+        border-radius: 1rem;
+        padding: 1ch;
+        border: 1px solid grey;
+        font-size: 1.2rem;
+        color: grey;
+      }
+    }
+  }
+
+  &__reviews {
+    width: 100%;
+    margin: 1ch 0rem;
+    @include flex(column, center, start, wrap);
+    gap: 1ch;
+    // background-color: green;
+    &-title {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    &-list {
+      //   background-color: magenta;
+      @include flex(column, center, start, wrap);
+      width: 100%;
+      gap: 1ch;
+    }
+  }
+  .reviews-item {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 3ch;
+    width: 100%;
+    border-radius: 1ch;
+    background-color: white;
+    @include flex(column, center, start, wrap);
+    &__header {
+      @include flex(row, space-between, center, wrap);
+      width: 100%;
+      font-size: 1.2rem;
+      //   background-color: blue;
+    }
+    &__name {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    &__content {
+      font-size: 1.2rem;
+      //   padding: 1ch;
+      width: 100%;
+      @include text-overflow(2);
+      color: grey;
+      //   background-color: green;
+    }
+
+    &__date {
+      color: grey;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.like {
+  font-size: 1.1rem;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: $red;
+  color: white;
+  z-index: 2;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  @include flex(row, center, center, wrap);
+}
+
+.review-form__container {
+  @include flex(column, center, start, wrap);
+  width: 100%;
+  // background-color: magenta;
+  position: relative;
+  gap: 0.8ch;
+  .review__label {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .review__input {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid grey;
+    padding: 1ch;
+  }
+  .review__submit {
+    position: relative;
+    background-color: $red;
+    color: white;
+    font-weight: bold;
+    margin: 0.5ch 0 0.5ch auto;
+    padding: 1ch 2ch;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+  }
+}

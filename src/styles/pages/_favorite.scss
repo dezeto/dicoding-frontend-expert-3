@@ -1,0 +1,14 @@
+.no-favorite-restaurant {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  grid-column: span 5;
+}
+
+.favorite-restaurant__not__found {
+  width: 100%;
+  font-size: 2.4rem;
+  text-align: center;
+  margin: auto;
+}
